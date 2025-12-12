@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Dashboard</title>
+<link rel="stylesheet" href="style.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="">
+<button class="theme-toggle" id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+
+<div class="container">
+    <div class="left-panel">
+        <div id="error-message" class="error-message"></div>
+        <div class="search-container">
+            <button id="gps-btn" class="search-btn"><i style="font-size: 15px;" class="fa-solid fa-location-crosshairs"></i></button>
+            <input type="text" id="city-input" class="search-box" placeholder="Search city...">
+            <button id="search-btn" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="weather-icon" id="weather-icon"></div>
+        <div class="temperature" id="temp">--°C</div>
+        <div class="location">
+            <span id="city-name">---</span>
+            <span id="current-day">--</span>
+        </div>
+        <div class="weather-details">
+             
+            <div class="detail-item" ><i style="color: rgb(255, 255, 255); font-size: 20px;"  class="fa-solid fa-cloud"></i> <span id="condition" >--</span></div>
+            <div class="detail-item"><i style="color: rgb(212, 72, 72); font-size: 20px;" class="fa-solid fa-temperature-high"></i> <span  id="min-temp"> Min Temperature - --°C</span></div>
+            <div class="detail-item"><i style="color: rgb(212, 72, 72); font-size: 20px;" class="fa-solid fa-temperature-high"></i> <span  id="max-temp"> Max Temperature - --°C</span></div>
+        </div>
+        <div class="weather-stats">
+            <div class="stat">
+                <div class="stat-value" ><i style="color: rgb(42, 163, 238); font-size: 25px;" class="fa-solid fa-droplet"></i> <span id="humidity">--%</span></div><div class="stat-label">Humidity</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" ><i style="color: rgb(196, 130, 205); font-size: 25px;" class="fa-solid fa-wind"></i> <span id="wind-speed"> -- km/h</span></div><div class="stat-label">Wind Speed</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <div class="week-header">Week</div>
+        <div class="week-forecast" id="weekly">
+            <div class="loading">Loading forecast...</div>
+        </div>
+        
+        <div class="overview-title">Today's Overview</div>
+        <div class="overview-cards">
+            <div class="overview-card">
+                <div class="overview-label">Visibility Meter</div>
+                <div class="overview-value" id="air_d">53</div>
+                <div class="overview-status status-good">Good</div>
+                <div class="overview-icon"><i style="color: rgb(8, 237, 80); font-size: 40px;" class="fa-solid fa-feather-pointed"></i></div>
+            </div>
+            <div class="overview-card">
+                <div class="overview-label">UV Index</div><div class="overview-value">3</div>
+                <div class="overview-status status-moderate">Moderate</div>
+                <div class="overview-icon"><i style="color: rgb(236, 94, 12); font-size: 40px;" class="fa-solid fa-volcano"></i></div>
+            </div>
+            <div class="overview-card">
+                <div class="overview-label">Pressure (hpa)</div>
+                <div class="overview-value" id="pressure">--</div>
+                <div class="overview-status status-normal">Normal</div>
+                <div class="overview-icon"><i style="color: rgb(255, 255, 255); font-size: 40px;" class="fa-solid fa-cloud"></i></div>
+            </div>
+
+             <div class="overview-card">
+                <div class="overview-label">sunrise  </div>
+                <div class="overview-value" id="sunrise">--</div>
+                <div class="overview-status status-normal"></div>
+                <div class="overview-icon"><i style="color: rgb(237, 218, 15); font-size: 40px;" class="fa-solid fa-sun"></i></div>
+            </div>
+
+                <div class="overview-card">
+                <div class="overview-label">sunset  </div>
+                <div class="overview-value" id="sunset">--</div>
+                <div class="overview-status status-normal"></div>
+                <div class="overview-icon"><i style="color: rgb(255, 255, 255); font-size: 40px;" class="fa-solid fa-cloud-sun"></i></div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
